@@ -5,7 +5,7 @@ metadata:
   labels:
     app: myapp
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: myapp
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: registry.mitmullingar.com/myapp:MYAPP_TAG
+        image: MYAPP_IMAGE
         ports:
         - containerPort: 8080
         readinessProbe:
